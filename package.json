@@ -4,7 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "grunt lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "grunt build"
   },
   "repository": {
@@ -20,15 +20,15 @@
   "homepage": "https://github.com/gaoyushu/spa-note#readme",
   "dependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-csslint": "^2.0.0",
-    "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-imagemin": "^2.0.1",
-    "grunt-contrib-uglify": "3.3.0",
-    "grunt-eslint": "^21.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-uglify": "4.0.1",
+    "grunt-eslint": "^22.0.0",
     "grunt-htmlhint": "^0.9.13",
     "grunt-usemin": "^3.1.1"
   }

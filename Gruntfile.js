@@ -17,7 +17,7 @@ module.exports = function (grunt) {
       options: {
         configFile: '.eslintrc.json'
       },
-      target: ['./js/*.js']
+      target: ['js/*.js']
     },
     htmlmin: {
       options: {

@@ -1,5 +1,5 @@
 /* menu */
-#menu{
+.menu{
     cursor: pointer;
 }
 
@@ -8,12 +8,15 @@
     float: left;
     width: 100%;
     list-style: none;
+    border-bottom: 1px solid #000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.074);
+    box-shadow: 0 3px 3px rgb(90, 53, 4);
     box-shadow: 0 3px 3px rgba(90, 53, 4, 0.489);
     padding: 0;
     margin: 0;
+    background-color: rgb(90, 53, 4);
     background-color: rgba(90, 53, 4, 0.489);
-};
+}
 .menu-title li{
     float: left;
 }
@@ -35,8 +38,11 @@
     padding: 10px 10px;
     position: absolute;
     top: 25px;
+    border: 1px solid rgb(90, 53, 4);
     border: 1px solid rgba(0, 0, 0, 0.143);
+    background-color: rgb(90, 53, 4);
     background-color: rgba(90, 53, 4, 0.489);
+    box-shadow: 3px 3px 3px rgb(90, 53, 4);
     box-shadow: 3px 3px 3px rgba(90, 53, 4, 0.489);
     display: none;
 }

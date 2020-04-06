@@ -1,8 +1,8 @@
 /* text */
-#text{
+.text{
     width: 100%;
 }
-#text textarea{
+.text textarea{
     width: 100%;
     height: 100%;
     box-sizing: border-box;

@@ -1,63 +1,63 @@
 var $menu = (function () {
-  var $box = $("#note");
-  var $bar = $('<div id="menu"></div>');
+  var $box = $('#note');
+  var $bar = $('<div id="menu" class="menu"></div>');
 
   var data = [
     {
-      title: "文件",
+      title: '文件',
       items: [
         {
-          title: "新建",
+          title: '新建',
         },
         {
-          title: "打开",
+          title: '打开',
         },
         {
-          title: "保存",
+          title: '保存',
         },
         {
-          title: "|ू･ω･` )",
+          title: '|ू･ω･` )',
         },
       ],
     },
     {
-      title: "编辑",
+      title: '编辑',
       items: [
         {
-          title: "剪切",
+          title: '剪切',
         },
         {
-          title: "复制",
+          title: '复制',
         },
         {
-          title: "粘贴",
+          title: '粘贴',
         },
         {
-          title: "删除",
+          title: '删除',
         },
       ],
     },
     {
-      title: "格式",
+      title: '格式',
       items: [
         {
-          title: "字体",
+          title: '字体',
         },
       ],
     },
     {
-      title: "查看",
+      title: '查看',
       items: [
         {
-          title: "看了个寂寞",
+          title: '看了个寂寞',
         },
       ],
     },
     {
-      title: "帮助",
+      title: '帮助',
       items: [
         {
-          title: "关于",
+          title: '关于',
         },
       ],
     },
@@ -77,14 +77,14 @@ var $menu = (function () {
       $bar.append($titles);
 
       $title.click(function (e) {
-        active = $(this).attr("menu-title");
+        active = $(this).attr('menu-title');
         showItems();
         e.stopPropagation();
       });
 
       $title.hover(function () {
         if (active !== -1) {
-          active = $(this).attr("menu-title");
+          active = $(this).attr('menu-title');
           showItems();
         }
       });
@@ -93,22 +93,22 @@ var $menu = (function () {
 
   function initItems() {
     for (var i = 0; i < data.length; i++) {
-      var items = "";
-      data[i].items.map((item, idx) => {
-        items += '<li class="menu-items-items" menu-items=' + i + "-" + idx + ">" + item.title + "</li>";
-      });
-      $items = $('<ul class="menu-items">' + items + "</ul>");
-      $items.css("left", i * 54);
+      var items = '';
+      for(var j = 0; j<data[i].items.length; j++){
+        items += '<li class="menu-items-items" menu-items=' + i + '-' + j + '>' + data[i].items[j].title + '</li>';
+      }
+      var $items = $('<ul class="menu-items">' + items + '</ul>');
+      $items.css('left', i * 54);
       $bar.append($items);
     }
     active = -1;
   }
 
   function showItems() {
-    $items = $(".menu-items");
-    $items.css("display", "none");
+    var $items = $('.menu-items');
+    $items.css('display', 'none');
     if (active != -1) {
-      $items.eq(active).css("display", "inline-block");
+      $items.eq(active).css('display', 'inline-block');
     }
   }
 

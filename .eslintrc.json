@@ -28,6 +28,10 @@
     "no-console": [
       "error",
       { "allow": ["error"] }
-    ]
+    ],
+    "no-unused-vars": [2, { 
+      "vars": "local",
+      "args": "none" 
+    }]
   }
 }

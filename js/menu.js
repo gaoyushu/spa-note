@@ -1,3 +1,5 @@
+/* exported $menu */
+/* global $font: true */
 var $menu = (function () {
   var $box = $('#note');
   var $bar = $('<div id="menu" class="menu"></div>');
@@ -92,6 +94,7 @@ var $menu = (function () {
   }
 
   function initItems() {
+    // 可以在data中定义每个选项的调用函数 在这里遍历时直接click事件函数即可 这样代码更简洁复用
     for (var i = 0; i < data.length; i++) {
       var items = '';
       for(var j = 0; j<data[i].items.length; j++){
@@ -102,6 +105,10 @@ var $menu = (function () {
       $bar.append($items);
     }
     active = -1;
+    $font.init();
+    $bar.find('[menu-items=\'2-0\']').click(function(){
+      $font.show();
+    });
   }
 
   function showItems() {

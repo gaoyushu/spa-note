@@ -1,3 +1,9 @@
+/* global $menu $text: true */   
+var cfg = {
+  family: 'Arial',
+  style: '常规',
+  size: '16',
+};
 $(function () {
   $menu.init();
   $text.init();
